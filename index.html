@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio - Pelinkehittäjä ja web-kehittäjä" />
+  <title>Portfolio | Tuomo Nuutinen</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <header>
+    <div class="container">
+      <nav class="nav" id="nav">
+        <a href="#hero" class="nav__logo">Portfolio</a>
+        <ul class="nav__links">
+          <li><a href="#about" class="nav-link">Tietoa</a></li>
+          <li><a href="#projects" class="nav-link">Projektit</a></li>
+          <li><a href="#skills" class="nav-link">Taidot</a></li>
+          <li><a href="#contact" class="nav-link">Yhteystiedot</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ── Main ── -->
+  <main>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="container">
+        <div class="hero__content">
+          <span class="hero__label animate-fade-up">Tradenomi (AMK)</span>
+          <span class="hero__label animate-fade-up">Elektroniikka-asentaja</span>
+          <h1 class="hero__title animate-fade-up delay-1">
+            Hei, olen <span class="gradient">Tuomo Nuutinen</span>.<br />
+            Luon moderneja peli-, sovellus- ja verkkokokemuksia.
+          </h1>
+          <p class="hero__description text-muted animate-fade-up delay-2">
+            Erikoistun pelien ja sovelluksien kehittämiseen, käyttöliittymäsuunnitteluun ja frontend-kehitykseen. 
+            Rakennan visuaalisesti vaikuttavia ja käyttäjäystävällisiä verkkosivustoja 
+            ja sovelluksia, jotka yhdistävät design-ajattelun ja teknisen toteutuksen.
+          </p>
+          <div class="hero__cta animate-fade-up delay-3">
+            <a href="#projects" class="btn btn--primary">Katso projektit →</a>
+            <a href="#contact" class="btn btn--outline">Ota yhteyttä</a>
+          </div>
+          <div class="social-links animate-fade-up delay-4" style="margin-top: 3rem;">
+            <a href="https://github.com/Tunem" target="_blank" class="social-link" aria-label="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/tuomo-nuutinen-3a84481a6/" target="_blank" class="social-link" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="mailto:nuutinentuomo@gmail.com" class="social-link" aria-label="Email">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header__label">Tietoa minusta</div>
+          <h2 class="section-header__title">Intohimona käyttäjäkokemukset</h2>
+          <p class="text-muted">
+            Olen intohimoinen web-kehittäjä, jolla on vahva tausta käyttöliittymäsuunnittelussa. 
+            Uskon, että parhaat digitaaliset tuotteet syntyvät, kun design ja kehitys kulkevat käsi kädessä.
+          </p><br>
+          <h2 class="section-header__title">Monipuolinen tausta</h2>
+          <p class="text-muted">
+            Vapaa-ajallani nautin uusien teknologioiden tutkimisesta, pelien pelaamisesta ja 
+            luovasta koodauksesta. Etsin jatkuvasti uusia haasteita, joissa voin yhdistää teknisen osaamiseni 
+            ja visuaalisen silmäni luodakseni jotain ainutlaatuista.
+          </p><br>
+          <h2 class="section-header__title">Miksi valita minut?</h2>
+          <p class="text-muted">
+            Tarjoan kokonaisvaltaista lähestymistapaa projekteihin, jossa ymmärrän sekä tekniset vaatimukset että käyttäjien tarpeet. 
+            Olen sitoutunut luomaan korkealaatuisia, skaalautuvia ja visuaalisesti vaikuttavia digitaalisia kokemuksia, jotka erottuvat joukosta.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header__label">Portfolio</div>
+          <h2 class="section-header__title">Viimeisimmät projektit</h2>
+        </div>
+        
+        <div class="grid grid-auto gap-xl">
+          
+          <!-- Project 1 -->
+          <a href="https://github.com/Tunem/chatbot" target="_blank" class="project-card">
+            <div class="project-card__image">
+              🎨
+            </div>
+            <div class="project-card__content">
+              <div class="project-card__tags">
+                <span class="project-card__tag">PHP</span>
+                <span class="project-card__tag">JavaScript</span>
+                <span class="project-card__tag">Gemini</span>
+                <span class="project-card__tag">Claude</span>
+              </div>
+              <h3 class="project-card__title">Chatbot</h3>
+              <p class="project-card__description">
+                Moderni hallintapaneeli verkkokaupalle. Sisältää reaaliaikaiset analytiikkatyökalut, 
+                tuotehallinta ja tilausten seurannan.
+              </p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header__label">Osaaminen</div>
+          <h2 class="section-header__title">Teknologiat & työkalut</h2>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: var(--space-md); justify-content: center;">
+          <div class="skill-badge">
+            <span class="skill-badge__icon">⚛️</span>
+            React
+          </div>
+          <div class="skill-badge">
+            <span class="skill-badge__icon">▲</span>
+            Node.js
+          </div>
+          <div class="skill-badge">
+            <span class="skill-badge__icon">🔷</span>
+            TypeScript
+          </div>
+          <div class="skill-badge">
+            <span class="skill-badge__icon">⚡</span>
+            JavaScript
+          </div>
+          <div class="skill-badge">
+            <span class="skill-badge__icon">🎨</span>
+            HTML + CSS
+          </div>
+          <div class="skill-badge">
+            <span class="skill-badge__icon">📱</span>
+            Responsive Design
+          </div>
+          <div class="skill-badge">
+            <span class="skill-badge__icon">🐘</span>
+            MySQL
+          </div>
+          <div class="skill-badge">
+            <span class="skill-badge__icon">📊</span>
+            Git
+          </div>
+          <div class="skill-badge">
+            <span class="skill-badge__icon">🎮</span>
+            Unity + C#
+          </div>
+          <div class="skill-badge">
+            <span class="skill-badge__icon">🎮</span>
+            Unreal Engine + C++
+          </div>
+          <div class="skill-badge">
+            <span class="skill-badge__icon">🤖</span>
+            Claude AI
+          </div>
+          <div class="skill-badge">
+            <span class="skill-badge__icon">🤖</span>
+            Gemini AI
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header__label">Yhteystiedot</div>
+          <h2 class="section-header__title">Otetaan yhteyttä</h2>
+          <p class="text-muted">
+            Etsitkö kehittäjää projektiisi? Keskustellaan miten voin auttaa.
+          </p>
+        </div>
+
+        <div class="contact-info" style="max-width: 600px; margin: 0 auto;">
+          <a href="mailto:nuutinentuomo@gmail.com" class="contact-item">
+            <div class="contact-item__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <div class="contact-item__content">
+              <h4>Sähköposti</h4>
+              <p>nuutinentuomo@gmail.com</p>
+            </div>
+          </a>
+
+          <a href="https://www.linkedin.com/in/tuomo-nuutinen-3a84481a6/" target="_blank" class="contact-item">
+            <div class="contact-item__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </div>
+            <div class="contact-item__content">
+              <h4>LinkedIn</h4>
+              <p>linkedin.com/in/tuomo-nuutinen-3a84481a6/</p>
+            </div>
+          </a>
+
+          <a href="https://github.com/Tunem" target="_blank" class="contact-item">
+            <div class="contact-item__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </div>
+            <div class="contact-item__content">
+              <h4>GitHub</h4>
+              <p>github.com/Tunem</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <span class="nav__logo">Portfolio</span>
+        <small>© 2026 · Suunniteltu ja toteutettu Claude AI:n avulla</small>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll with offset for fixed nav
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const offset = 80;
+          const targetPosition = target.offsetTop - offset;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Nav scroll effect
+    const nav = document.getElementById('nav');
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      
+      if (currentScroll > 100) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+      
+      lastScroll = currentScroll;
+    });
+
+    // Active nav link on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.pageYOffset >= (sectionTop - 200)) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // Intersection Observer for animations
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.animationPlayState = 'running';
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    // Observe all animated elements
+    document.querySelectorAll('.animate-fade-up, .animate-fade-in, .animate-slide-in').forEach(el => {
+      el.style.animationPlayState = 'paused';
+      observer.observe(el);
+    });
+
+    // Observe cards and skill badges for staggered animation
+    document.querySelectorAll('.project-card, .skill-badge').forEach((el, index) => {
+      el.classList.add('animate-fade-up');
+      el.style.animationDelay = `${index * 0.1}s`;
+      el.style.animationPlayState = 'paused';
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>
