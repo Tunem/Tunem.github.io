@@ -345,6 +345,10 @@ small {
   background: rgba(0, 217, 255, 0.05);
 }
 
+.btn--project { 
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-2) 100%); 
+}
+
 /* Social Links */
 .social-links {
   display: flex;
