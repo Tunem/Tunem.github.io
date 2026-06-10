@@ -256,7 +256,7 @@
         </div>
 
         <div style="text-align: center; margin-top: var(--space-xl);">
-          <a href="projects.html" class="btn btn--project">Katso lisää projekteja →</a>
+          <a href="projects.html" class="btn btn--primary">Katso lisää projekteja →</a>
         </div>
     </section>
 
@@ -312,7 +312,7 @@
     <div class="container">
       <div class="footer-content">
         <span class="nav__logo">Portfolio</span>
-        <small>© 2026 · Suunniteltu ja toteutettu Claude AI:n avulla</small>
+        <small>© 2026 Tuomo Nuutinen · Suunniteltu ja toteutettu Claude AI:n avulla</small>
       </div>
     </div>
   </footer>
@@ -334,43 +334,39 @@
       });
     });
 
-    // Nav scroll effect
-    const nav = document.getElementById('nav');
+    // Nav scroll effect + Active nav link on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
     let lastScroll = 0;
-
+ 
     window.addEventListener('scroll', () => {
       const currentScroll = window.pageYOffset;
       
+      // Nav scroll effect
       if (currentScroll > 100) {
         nav.classList.add('scrolled');
       } else {
         nav.classList.remove('scrolled');
       }
       
-      lastScroll = currentScroll;
-    });
-
-    // Active nav link on scroll
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    window.addEventListener('scroll', () => {
+      // Active nav link on scroll
       let current = '';
-      
       sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        if (window.pageYOffset >= (sectionTop - 200)) {
+        if (currentScroll >= (sectionTop - 200)) {
           current = section.getAttribute('id');
         }
       });
-
+ 
       navLinks.forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('href') === `#${current}`) {
           link.classList.add('active');
         }
       });
+      
+      lastScroll = currentScroll;
     });
 
     // Intersection Observer for animations

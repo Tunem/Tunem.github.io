@@ -132,7 +132,7 @@ small {
 }
 
 .section { 
-  padding-block: var(--space-xl); 
+  padding-block: var(--space-2xl); 
 }
 
 .flex { 
@@ -345,10 +345,6 @@ small {
   background: rgba(0, 217, 255, 0.05);
 }
 
-.btn--project { 
-  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-2) 100%); 
-}
-
 /* Social Links */
 .social-links {
   display: flex;
@@ -381,11 +377,8 @@ small {
   border-radius: var(--radius-md);
   overflow: hidden;
   transition: all var(--transition);
-  cursor: pointer;
   display: block;
-  text-decoration: none;
   color: inherit;
-  position: relative;
 }
 
 .project-card:hover {
@@ -408,7 +401,6 @@ small {
 }
 
 .project-card:hover .project-card__image {
-  /* UUSI: Kuva kirkastuu hoverissa */
   background: linear-gradient(135deg, rgba(0, 217, 255, 0.15) 0%, rgba(124, 58, 237, 0.15) 100%);
 }
 
@@ -432,45 +424,49 @@ small {
   color: var(--color-accent);
 }
 
+/* Otsikko-linkki (GitHub) */
+.project-card__title-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: var(--space-sm);
+  transition: color var(--transition);
+}
+
+.project-card__title-link:hover {
+  color: var(--color-accent);
+}
+
 .project-card__title {
   font-size: 1.5rem;
-  margin-bottom: var(--space-sm);
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  margin-bottom: 0;
 }
 
+/* GitHub-ikoni vasemmalla */
+.project-card__title svg:first-child {
+  flex-shrink: 0;
+  opacity: 0.7;
+  transition: opacity var(--transition);
+}
+
+.project-card__title-link:hover .project-card__title svg:first-child {
+  opacity: 1;
+}
+
+/* Ulkoinen linkki -ikoni oikealla */
 .project-card__link-icon {
   opacity: 0;
   transform: translate(-4px, 4px);
   transition: all var(--transition);
   color: var(--color-accent);
   flex-shrink: 0;
+  margin-left: auto;
 }
 
-.project-card__demo-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.25rem;
-  margin-top: var(--space-md);
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--color-accent);
-  border: 1px solid var(--color-accent);
-  border-radius: var(--radius-sm);
-  transition: all var(--transition);
-  position: relative;
-  z-index: 10; /* Tärkeä: nostaa linkin kortin päälle */
-}
-
-.project-card__demo-link:hover {
-  background: var(--color-accent);
-  color: var(--color-bg);
-  transform: translateX(2px);
-}
-
-.project-card:hover .project-card__link-icon {
+.project-card__title-link:hover .project-card__link-icon {
   opacity: 1;
   transform: translate(0, 0);
 }
@@ -478,6 +474,28 @@ small {
 .project-card__description {
   color: var(--color-muted);
   line-height: 1.6;
+  margin-bottom: var(--space-md);
+}
+
+/* Demo-linkki */
+.project-card__demo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition);
+  text-decoration: none;
+}
+
+.project-card__demo-link:hover {
+  background: var(--color-accent);
+  color: var(--color-bg);
+  transform: translateX(2px);
 }
 
 /* Skill Badge */
@@ -647,10 +665,20 @@ footer {
 }
 
 @media (max-width: 768px) {
+  /* Navigation */
+  .nav {
+    padding: var(--space-md) var(--space-lg);
+  }
+  
+  .nav__logo {
+    font-size: 1.2rem;
+  }
+  
   .nav__links {
     display: none;
   }
   
+  /* Grids */
   .grid-2,
   .grid-3 {
     grid-template-columns: 1fr;
@@ -660,28 +688,100 @@ footer {
     grid-template-columns: 1fr;
   }
   
+  /* Hero */
   .hero {
     padding-top: 4rem;
-    min-height: 90vh;
+    min-height: 85vh;
+  }
+  
+  .hero__label {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .hero__title {
+    font-size: clamp(2rem, 7vw, 3rem);
+    margin-bottom: var(--space-lg);
+  }
+  
+  .hero__description {
+    font-size: 1rem;
+    margin-bottom: var(--space-lg);
   }
   
   .hero__cta {
     flex-direction: column;
+    gap: var(--space-sm);
   }
   
   .btn {
     width: 100%;
     justify-content: center;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
   }
   
+  /* Social links */
+  .social-links {
+    gap: var(--space-sm);
+  }
+  
+  .social-link {
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* Project cards */
+  .project-card__title {
+    font-size: 1.3rem;
+  }
+  
+  .project-card__description {
+    font-size: 0.9rem;
+  }
+  
+  /* Section */
+  .section {
+    padding-block: var(--space-xl);
+  }
+  
+  .section-header {
+    margin-bottom: var(--space-lg);
+  }
+  
+  .section-header__title {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+  }
+  
+  /* Contact */
+  .contact-item {
+    gap: var(--space-md);
+    padding: var(--space-md);
+  }
+  
+  .contact-item__icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+  }
+  
+  .contact-item__content h4 {
+    font-size: 0.95rem;
+  }
+  
+  .contact-item__content p {
+    font-size: 0.85rem;
+  }
+  
+  /* Footer */
   .footer-content {
     flex-direction: column;
     gap: var(--space-md);
     text-align: center;
   }
   
-  .section {
-    padding-block: var(--space-xl);
+  .nav__logo {
+    font-size: 1.1rem;
   }
 }
 
@@ -690,8 +790,135 @@ footer {
     width: 90vw;
   }
   
-  .skill-badge {
+  /* Navigation */
+  .nav {
+    padding: var(--space-sm) var(--space-md);
+  }
+  
+  .nav__logo {
+    font-size: 1rem;
+  }
+  
+  /* Typography */
+  h1 {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+  }
+  
+  h2 {
+    font-size: clamp(1.3rem, 4vw, 2rem);
+  }
+  
+  h3 {
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+  }
+  
+  h4 {
+    font-size: 1rem;
+  }
+  
+  /* Hero */
+  .hero {
+    padding-top: 3.5rem;
+    min-height: 80vh;
+  }
+  
+  .hero__content {
+    max-width: 100%;
+  }
+  
+  .hero__cta {
+    gap: var(--space-xs);
+  }
+  
+  .btn {
+    padding: 0.65rem 1.25rem;
     font-size: 0.85rem;
-    padding: 0.6rem 1rem;
+  }
+  
+  /* Skill badges */
+  .skill-badge {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.8rem;
+  }
+  
+  .skill-badge__icon {
+    font-size: 1rem;
+  }
+  
+  /* Project cards */
+  .project-card__image {
+    aspect-ratio: 4/3;
+    font-size: 2.5rem;
+  }
+  
+  .project-card__content {
+    padding: var(--space-md);
+  }
+  
+  .project-card__tag {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.6rem;
+  }
+  
+  .project-card__title {
+    font-size: 1.1rem;
+    gap: 0.3rem;
+  }
+  
+  .project-card__title svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .project-card__description {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+  
+  .project-card__demo-link {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  
+  /* Section spacing */
+  .section {
+    padding-block: var(--space-lg);
+  }
+  
+  .section-header {
+    margin-bottom: var(--space-md);
+  }
+  
+  .section-header__label {
+    font-size: 0.65rem;
+  }
+  
+  /* Contact items */
+  .contact-item {
+    flex-direction: column;
+    gap: var(--space-sm);
+    padding: var(--space-md);
+    text-align: center;
+  }
+  
+  .contact-item__icon {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+  
+  .contact-item__content h4 {
+    font-size: 0.9rem;
+    margin-bottom: 0.1rem;
+  }
+  
+  .contact-item__content p {
+    font-size: 0.8rem;
+    word-break: break-word;
+  }
+  
+  /* Footer */
+  .footer-content {
+    font-size: 0.85rem;
   }
 }
